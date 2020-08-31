@@ -8,13 +8,13 @@ with open(path.join(this_directory, 'README.md')) as f:
     long_description = f.read()
 
 # remove emojiis
-long_description = sub(":[a-z]+:", "- ", long_description)
+long_description = sub(":[a-z_]+:", "- ", long_description)
 
 setup(
   name = 'prune',
   packages = ['prune'],
-  version = "0.0.0",
-  description = ':deciduous_tree: Trim Entries from a Python Dictionary',
+  version = "0.0.1",
+  description = 'Trim Entries from a Python Dictionary',
   long_description = long_description,
   long_description_content_type='text/markdown',
   author = 'Daniel J. Dufour',
